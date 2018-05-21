@@ -1101,13 +1101,13 @@ call_func_retnr(
     char_u      *func,
     int		argc,
     char_u      **argv,
-    int		safe)		/* use the sandbox */
+    int		safe,		/* use the sandbox */
+    int		str_arg_only)	/* all arguments are strings */
 {
     typval_T	rettv;
     varnumber_T	retval;
 
-    /* All arguments are passed as strings, no conversion to number. */
-    if (call_vim_function(func, argc, argv, safe, TRUE, &rettv) == FAIL)
+    if (call_vim_function(func, argc, argv, safe, str_arg_only, &rettv) == FAIL)
 	return -1;
 
     retval = get_tv_number_chk(&rettv, NULL);

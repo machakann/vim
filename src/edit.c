@@ -5441,7 +5441,7 @@ ins_complete(int c, int enable_pum)
 	    pos = curwin->w_cursor;
 	    curwin_save = curwin;
 	    curbuf_save = curbuf;
-	    col = call_func_retnr(funcname, 2, args, FALSE);
+	    col = call_func_retnr(funcname, 2, args, FALSE, FALSE);
 	    if (curwin_save != curwin || curbuf_save != curbuf)
 	    {
 		EMSG(_(e_complwin));

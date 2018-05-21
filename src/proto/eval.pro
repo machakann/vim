@@ -20,7 +20,7 @@ list_T *eval_spell_expr(char_u *badword, char_u *expr);
 int get_spellword(list_T *list, char_u **pp);
 typval_T *eval_expr(char_u *arg, char_u **nextcmd);
 int call_vim_function(char_u *func, int argc, char_u **argv, int safe, int str_arg_only, typval_T *rettv);
-varnumber_T call_func_retnr(char_u *func, int argc, char_u **argv, int safe);
+varnumber_T call_func_retnr(char_u *func, int argc, char_u **argv, int safe, int str_arg_only);
 void *call_func_retstr(char_u *func, int argc, char_u **argv, int safe);
 void *call_func_retlist(char_u *func, int argc, char_u **argv, int safe);
 int eval_foldexpr(char_u *arg, int *cp);
